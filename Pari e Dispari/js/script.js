@@ -7,14 +7,16 @@ function getRndNumber (min, max) {
 
 
 formButton.addEventListener('click' , function(e){
-    const numberFromInput = document.getElementById('numberFromInput').value;
-    console.log(numberFromInput)
+    const numberFromInput = parseInt(document.getElementById('numberFromInput').value);
 
-    if(numberFromInput > 5 || numberFromInput < 1) {
-        alert ('insert 1 to 5')
-    }
+    let computerNum = getRndNumber(1, 6);
+    console.log('numero del computer', computerNum, typeof computerNum)
+    let sum = numberFromInput + computerNum;
+    console.log('somma dei numeri', sum)
 
-    console.log(getRndNumber(1, 5))
+    
+
+
     
 })
 
