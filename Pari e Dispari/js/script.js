@@ -1,4 +1,5 @@
-const formButton = document.getElementById('form-button')
+const formButton = document.getElementById('form-button');
+
 
 
 function getRndNumber (min, max) {
@@ -25,14 +26,19 @@ submitForm.addEventListener('submit' , function(e){
         return false;
     }
     
-    if (isEven(sum) == true) {
+    if (isEven(sum) == true && document.getElementById('input-select').value == "even") {
         const result = document.querySelector('h1');
         result.innerHTML = 'HAI VINTO!'
     }
 
-    else {
+    else if (isEven(sum) == false && document.getElementById('input-select').value == "shots") {
         const result = document.querySelector('h1');
-        result.innerHTML = 'HAI perso!'
+        result.innerHTML = 'HAI VINTO!'
+    }
+
+    else  {
+        const result = document.querySelector('h1');
+        result.innerHTML = 'HAI PERSO!'
     }
     
 })
